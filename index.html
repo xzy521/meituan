@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+    <div class="big">
+        <ul>
+            <img src="img/ceiling-logo2.png" alt="">
+            <input type="text" placeholder="搜索商家,美食" class="fa fa-search">
+            <p>搜索</p>
+        </ul>
+        <div class="cent">
+            <p class="ban" onclick="sp(this)">我的购物车<span id="shopp">(0)</span></p>
+            <div class="hidden" id="fom">
+                <table class="tb" id="tul">
+                    <tr>
+                        <th>全选<input type="checkbox" onclick="allpitch(this)" id="allradi"></th>
+                        <th>菜品</th>
+                        <th>价格(元/份)</th>
+                        <th>操作</th>
+                    </tr>
+                </table>
+            <li>
+                <input type="button" value="全部删除" class="alldle" onclick="alldel()" disabled = "disabled" id="alldell">
+                <div class="settle" id="rightbo">合计<a class="fa fa-jpy" id="money">0</a><span onclick="payfo()">结算</span></div>
+            </li>
+            <li class="continue" onclick="contin()">继续任性点餐</li>
+            </div>
+            <ol id="upone">
+                <li>
+                    <img src="img/1cde.jpg" alt="">
+                    <span class="eat">
+                        <p name="t">A米汉堡</p>
+                        <p name="f">16元/份</p>
+                    </span>
+                    <p class="pin">月销8148单</p>
+                    <span class="detail">
+                        <p>起送<a class="fa fa-jpy">10</a></p>
+                        <p>免配送费</p>
+                        <p>45分钟</p>
+                    </span>
+                    <a class="shop" onclick="add(this)">加入购物车</a>
+                </li>
+                <li>
+                    <img src="img/3a31d.jpg" alt="">
+                    <span class="eat">
+                        <p name="t">杨记小厨</p>
+                        <p name="f">17.5元/份</p>
+                    </span>
+                    <p class="pin">月销4639单</p>
+                    <span class="detail">
+                        <p>起送<a class="fa fa-jpy">10</a></p>
+                        <p>免配送费</p>
+                        <p>38分钟</p>
+                    </span>
+                    <a class="shop" onclick="add(this)">加入购物车</a>
+                </li>
+                <li>
+                    <img src="img/9ecd.jpg" alt="">
+                    <span class="eat">
+                        <p>杨铭宇黄焖鸡米饭</p>
+                        <p>18元/份</p>
+                    </span>
+                    <p class="pin">月销2548单</p>
+                    <span class="detail">
+                        <p>起送<a class="fa fa-jpy">10</a></p>
+                        <p>免配送费</p>
+                        <p>29分钟</p>
+                    </span>
+                    <a class="shop" onclick="add(this)">加入购物车</a>
+                </li>
+                <li>
+                    <img src="img/d64c553.jpg" alt="">
+                    <span class="eat">
+                        <p>烤肉拌饭</p>
+                        <p>18元/份</p>
+                    </span>
+                    <p class="pin">月销2148单</p>
+                    <span class="detail">
+                        <p>起送<a class="fa fa-jpy">10</a></p>
+                        <p>免配送费</p>
+                        <p>29分钟</p>
+                    </span>
+                    <a class="shop" onclick="add(this)">加入购物车</a>
+                </li>
+            </ol>
+
+            <ol id=uper>
+                <li>
+                    <img src="img/3d875.jpg" alt="">
+                    <span class="eat">
+                        <p>有名堂(焗饭、小炒)</p>
+                        <p>14元/份</p>
+                    </span>
+                    <p class="pin">月销2148单</p>
+                    <span class="detail">
+                        <p>起送<a class="fa fa-jpy">10</a></p>
+                        <p>免配送费</p>
+                        <p>45分钟</p>
+                    </span>
+                    <a class="shop" onclick="add(this)">加入购物车</a>
+                </li>
+                <li>
+                    <img src="img/880259b.jpg" alt="">
+                    <span class="eat">
+                        <p>翔仔湾(美食特惠)</p>
+                        <p>20元/份</p>
+                    </span>
+                    <p class="pin">月销1809单</p>
+                    <span class="detail">
+                        <p>起送<a class="fa fa-jpy">10</a></p>
+                        <p>免配送费</p>
+                        <p>38分钟</p>
+                    </span>
+                    <a class="shop" onclick="add(this)">加入购物车</a>
+                </li>
+                <li>
+                    <img src="img/1b718f.jpg" alt="">
+                    <span class="eat">
+                        <p>食尚便当</p>
+                        <p>21元/份</p>
+                    </span>
+                    <p class="pin">月销3554单</p>
+                    <span class="detail">
+                        <p>起送<a class="fa fa-jpy">10</a></p>
+                        <p>免配送费</p>
+                        <p>29分钟</p>
+                    </span>
+                    <a class="shop" onclick="add(this)">加入购物车</a>
+                </li>
+                <li>
+                    <img src="img/4c981e4.jpg" alt="">
+                    <span class="eat">
+                        <p>格子那只水饺</p>
+                        <p>18元/份</p>
+                    </span>
+                    <p class="pin">月销2682单</p>
+                    <span class="detail">
+                        <p>起送<a class="fa fa-jpy">10</a></p>
+                        <p>免配送费</p>
+                        <p>29分钟</p>
+                    </span>
+                    <a class="shop" onclick="add(this)">加入购物车</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <script src="js/add.js"></script>
+</body>
+</html>
